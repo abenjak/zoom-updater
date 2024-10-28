@@ -7,7 +7,7 @@ This script attempts to update Zoom programmatically (it can be used on startup)
 
 There are two strategies I can think of:
 1) Download the latest `zoom_amd64.deb` and extract the version from it (works fine, but will download a ~167 MB file every time)
-2) Fetch the version from the release notes web page (a lighter solution, but parsing that website is not straightforward)
+2) Fetch the version from the [release notes](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222) (a lighter solution, but parsing that website is not straightforward)
 
 Solution 2 is implemented here.
 
