@@ -1,7 +1,7 @@
 # zoom-updater
 **A simple script to update Zoom on Linux**
 
-Zoom is not available in Linux repositories, and therefore not possible to update using `apt`.
+Zoom is not available in Linux repositories, and therefore not possible to update with `apt`.
 Zoom has an auto-update feature triggered upon GUI launch, but it's inconvenient (say you are in a hurry to connect to a Zoom call only to be greeted with the update message).
 This script attempts to update Zoom programmatically (it can be used on startup).
 
