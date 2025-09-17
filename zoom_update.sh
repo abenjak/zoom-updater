@@ -3,7 +3,7 @@
 # A simple script to update Zoom on Linux
 
 # fetch the latest version from the website
-latestVersion=$(curl --silent "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222" | sed -E "s/^.+Released//" | sed "s/table-row/table-row\n/g" | grep -A1 -m1 -P "\>Linux\<.*table-row" | head -2 | tail -n1 | sed -E 's/<\/td><td[^>]+>/\n/g' | head -3 | tail -n1 | sed -E "s/[^0-9]?([0-9\.]+).+\(([0-9]+)\)/\1.\2/")
+latestVersion=$(curl --silent "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222" | sed -E "s/^.+Released//" | sed "s/table-row/table-row\n/g" | grep -A1 -m1 -P "\>Linux\<.*table-row" | head -2 | tail -n1 | sed -E 's/<\/td><td[^>]?>/\n/g' | head -3 | tail -n1 | sed -E "s/[^0-9]?([0-9\.]+).+\(([0-9]+)\)/\1.\2/")
 
 if [ -z "$latestVersion" ]; then
 	echo "Failed to retrieve latest version of Zoom."
